@@ -381,6 +381,9 @@
       margin: 60px 0;
     }
 
+    /* IMPORTANT: keep mismatch block text light (prevents global navy override) */
+    .mismatch-block, .mismatch-block * { color: rgba(250,246,239,0.85); }
+
     .mismatch-block h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
@@ -751,8 +754,6 @@
       <div class="related-label">Related reading</div>
       <ul class="related-list">
         <li><a href="https://articles.sparkedconnection.com/" rel="internal">All relationship articles</a></li>
-
-        <!-- The extra internal-link "boost" (to your main site / conversion page) -->
         <li><a href="https://sparkedconnection.com/" rel="internal">Work with a matchmaker at Sparked Connection</a></li>
 
         <!-- Add 2–4 real articles as you publish them -->

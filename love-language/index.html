@@ -1,3 +1,20 @@
+Absolutely — here’s your **fully updated, copy-paste ready** HTML with **all the new updates included**, plus the **hero image wired in correctly** and the **social share image tags updated** to use your uploaded asset.
+
+Key updates included:
+
+* ✅ Hero image block + styling (magazine/editorial feel)
+* ✅ Mobile spacing for hero image
+* ✅ Top internal linking “boost” block
+* ✅ Related reading block
+* ✅ Fix to stop the global “navy text” override breaking the dark mismatch section
+* ✅ **OG/Twitter image + schema image** now pointing to your uploaded image (so shares show the visual)
+
+> Your uploaded image path for the live site is:
+> `https://articles.sparkedconnection.com/assets/love-language-sparked-connection-matchmaking.png`
+
+---
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +35,15 @@
   <meta property="og:title" content="Love Languages Explained — How They Shape Relationships">
   <meta property="og:description" content="A psychology-based editorial exploring love languages, emotional misalignment, and how couples can reconnect.">
   <meta property="og:url" content="https://articles.sparkedconnection.com/love-language/">
-  <!-- Optional: add when you have a proper share image -->
-  <!-- <meta property="og:image" content="https://articles.sparkedconnection.com/assets/love-language.jpg"> -->
+  <meta property="og:image" content="https://articles.sparkedconnection.com/assets/love-language-sparked-connection-matchmaking.png">
+  <meta property="og:image:alt" content="A couple facing each other with a speech bubble showing icons representing love languages">
 
   <!-- Social Previews: Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Love Languages Explained — Relationship Psychology Guide">
   <meta name="twitter:description" content="Why couples misunderstand each other — and how to reconnect through emotional fluency.">
-  <!-- Optional: add when you have a proper share image -->
-  <!-- <meta name="twitter:image" content="https://articles.sparkedconnection.com/assets/love-language.jpg"> -->
+  <meta name="twitter:image" content="https://articles.sparkedconnection.com/assets/love-language-sparked-connection-matchmaking.png">
+  <meta name="twitter:image:alt" content="A couple facing each other with a speech bubble showing icons representing love languages">
 
   <!-- Editorial Authority: Article Schema (JSON-LD) -->
   <script type="application/ld+json">
@@ -47,6 +64,9 @@
       "name": "Sparked Connection",
       "url": "https://sparkedconnection.com"
     },
+    "image": [
+      "https://articles.sparkedconnection.com/assets/love-language-sparked-connection-matchmaking.png"
+    ],
     "datePublished": "2026-02-01",
     "dateModified": "2026-02-01",
     "mainEntityOfPage": {
@@ -209,6 +229,29 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 40px 100px;
+    }
+
+    /* ---- HERO IMAGE (Magazine editorial) ---- */
+    .hero-image{
+      max-width: 1100px;
+      margin: 10px auto 55px;
+      padding: 0 40px;
+    }
+    .hero-image img{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid rgba(92,61,46,0.15);
+    }
+    .hero-image figcaption{
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-top: 12px;
+      color: var(--muted);
+      opacity: 0.9;
     }
 
     /* ---- OPENING ---- */
@@ -561,6 +604,9 @@
       .pull-quote blockquote { font-size: 1.4rem; }
       .intro-block { margin: 60px auto 18px; }
       .top-internal-link { margin-bottom: 45px; }
+
+      /* Hero image mobile spacing */
+      .hero-image { padding: 0 20px; margin-bottom: 40px; }
     }
   </style>
 </head>
@@ -595,6 +641,16 @@
 </div>
 
 <div class="article-body">
+
+  <!-- HERO IMAGE -->
+  <figure class="hero-image" aria-label="Love languages illustration">
+    <img
+      src="../assets/love-language-sparked-connection-matchmaking.png"
+      alt="A couple facing each other with a speech bubble showing icons representing love languages"
+      loading="eager"
+    >
+    <figcaption>Love languages are often the difference between effort and feeling loved.</figcaption>
+  </figure>
 
   <!-- OPENING -->
   <div class="opening">
@@ -785,3 +841,4 @@
 
 </body>
 </html>
+```

@@ -1,4 +1,4 @@
-  <!-- JSON-LD: Sparked Connection Journal -->
+  <!-- JSON-LD: Sparked Connection Journal (CollectionPage + Series + Articles) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,24 +26,32 @@
       "@type": "CreativeWorkSeries",
       "@id": "https://articles.sparkedconnection.com/#series",
       "name": "Sparked Connection Journal",
-      "url": "https://articles.sparkedconnection.com/"
-    },
-
-    "hasPart": [
-      {
-        "@type": "Article",
-        "@id": "https://articles.sparkedconnection.com/online-dating-effects/#article",
-        "headline": "How Online Dating Changed Everything - And Not For The Better",
-        "url": "https://articles.sparkedconnection.com/online-dating-effects/",
-        "datePublished": "2026-02-26"
+      "url": "https://articles.sparkedconnection.com/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sparked Connection",
+        "url": "https://sparkedconnection.com"
       },
-      {
-        "@type": "Article",
-        "@id": "https://articles.sparkedconnection.com/love-language/#article",
-        "headline": "Love Languages Explained — How They Shape Relationships",
-        "url": "https://articles.sparkedconnection.com/love-language/",
-        "datePublished": "2026-02-01"
-      }
-    ]
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://articles.sparkedconnection.com/#website"
+      },
+      "hasPart": [
+        {
+          "@type": "Article",
+          "@id": "https://articles.sparkedconnection.com/online-dating-effects/#article",
+          "headline": "How Online Dating Changed Everything - And Not For The Better",
+          "url": "https://articles.sparkedconnection.com/online-dating-effects/",
+          "datePublished": "2026-02-26"
+        },
+        {
+          "@type": "Article",
+          "@id": "https://articles.sparkedconnection.com/love-language/#article",
+          "headline": "Love Languages Explained — How They Shape Relationships",
+          "url": "https://articles.sparkedconnection.com/love-language/",
+          "datePublished": "2026-02-01"
+        }
+      ]
+    }
   }
   </script>

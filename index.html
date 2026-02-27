@@ -1,57 +1,85 @@
-  <!-- JSON-LD: Sparked Connection Journal (CollectionPage + Series + Articles) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://articles.sparkedconnection.com/#collection",
-    "url": "https://articles.sparkedconnection.com/",
-    "name": "Sparked Connection Journal",
-    "description": "Luxury editorial relationship articles by Sparked Connection covering love languages, modern dating psychology and emotionally aligned connection.",
-    "inLanguage": "en-GB",
-
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://articles.sparkedconnection.com/#website",
-      "name": "Sparked Connection Articles",
-      "url": "https://articles.sparkedconnection.com/"
-    },
-
-    "publisher": {
+<!-- JSON-LD: Sparked Connection Journal (Publisher + WebSite + Series + CollectionPage + Articles) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
       "@type": "Organization",
+      "@id": "https://sparkedconnection.com/#organization",
       "name": "Sparked Connection",
       "url": "https://sparkedconnection.com"
     },
-
-    "mainEntity": {
+    {
+      "@type": "WebSite",
+      "@id": "https://articles.sparkedconnection.com/#website",
+      "url": "https://articles.sparkedconnection.com/",
+      "name": "Sparked Connection Articles",
+      "publisher": {
+        "@id": "https://sparkedconnection.com/#organization"
+      },
+      "inLanguage": "en-GB"
+    },
+    {
       "@type": "CreativeWorkSeries",
       "@id": "https://articles.sparkedconnection.com/#series",
       "name": "Sparked Connection Journal",
       "url": "https://articles.sparkedconnection.com/",
       "publisher": {
-        "@type": "Organization",
-        "name": "Sparked Connection",
-        "url": "https://sparkedconnection.com"
+        "@id": "https://sparkedconnection.com/#organization"
       },
       "isPartOf": {
-        "@type": "WebSite",
         "@id": "https://articles.sparkedconnection.com/#website"
       },
       "hasPart": [
-        {
-          "@type": "Article",
-          "@id": "https://articles.sparkedconnection.com/online-dating-effects/#article",
-          "headline": "How Online Dating Changed Everything - And Not For The Better",
-          "url": "https://articles.sparkedconnection.com/online-dating-effects/",
-          "datePublished": "2026-02-26"
-        },
-        {
-          "@type": "Article",
-          "@id": "https://articles.sparkedconnection.com/love-language/#article",
-          "headline": "Love Languages Explained — How They Shape Relationships",
-          "url": "https://articles.sparkedconnection.com/love-language/",
-          "datePublished": "2026-02-01"
-        }
+        { "@id": "https://articles.sparkedconnection.com/online-dating-effects/#article" },
+        { "@id": "https://articles.sparkedconnection.com/love-language/#article" }
       ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://articles.sparkedconnection.com/#collection",
+      "url": "https://articles.sparkedconnection.com/",
+      "name": "Sparked Connection Journal",
+      "description": "Luxury editorial relationship articles by Sparked Connection covering love languages, modern dating psychology and emotionally aligned connection.",
+      "inLanguage": "en-GB",
+      "isPartOf": {
+        "@id": "https://articles.sparkedconnection.com/#website"
+      },
+      "publisher": {
+        "@id": "https://sparkedconnection.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://articles.sparkedconnection.com/#series"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://articles.sparkedconnection.com/online-dating-effects/#article",
+      "headline": "How Online Dating Changed Everything - And Not For The Better",
+      "url": "https://articles.sparkedconnection.com/online-dating-effects/",
+      "datePublished": "2026-02-26",
+      "dateModified": "2026-02-26",
+      "isPartOf": {
+        "@id": "https://articles.sparkedconnection.com/#series"
+      },
+      "publisher": {
+        "@id": "https://sparkedconnection.com/#organization"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://articles.sparkedconnection.com/love-language/#article",
+      "headline": "Love Languages Explained — How They Shape Relationships",
+      "url": "https://articles.sparkedconnection.com/love-language/",
+      "datePublished": "2026-02-01",
+      "dateModified": "2026-02-01",
+      "isPartOf": {
+        "@id": "https://articles.sparkedconnection.com/#series"
+      },
+      "publisher": {
+        "@id": "https://sparkedconnection.com/#organization"
+      }
     }
-  }
-  </script>
+  ]
+}
+</script>
